@@ -1,8 +1,5 @@
 package dfa;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -50,10 +47,10 @@ public class DFA {
         return accepted;
     }
 
-    public boolean run_all() throws IOException {
+    public boolean run_all() {
         boolean accepted = true;
         while (!this.strings.isEmpty())
-            accepted = accepted && this.run_next();
+            accepted = this.run_next() && accepted;
         return accepted;
     }
 
