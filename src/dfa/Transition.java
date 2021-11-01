@@ -1,7 +1,5 @@
 package dfa;
 
-import java.util.ArrayList;
-
 public class Transition {
     public State state1;
     public char variable;
